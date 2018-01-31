@@ -17,7 +17,15 @@ int main(int argc, char const *argv[])
 	 printf("The size of the array is %d\n", SizeArr); */
 
 	int result = BnrSrch( SizeArr, 73,primes);
-	printf("The index of the number is %d\n", result);
+	if (result < 0)
+	{
+		printf("Index not found\n");
+	}
+	else
+	{
+		printf("The index of the number is %d\n", result);
+	}
+	
 		return 0;
 }
 
@@ -44,7 +52,8 @@ int BnrSrch(int SizeOfArray, int target, int arr[]){
 			max = walker -1;
 		}
 
-
 	}
+
+	return -1;
 	
 }
