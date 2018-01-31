@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 	 printf("The size of the array is %d\n", SizeArr); */
 
 	int result = BnrSrch( SizeArr, 73,primes);
-	printf("The index of the number is number %d\n", result);
+	printf("The index of the number is %d\n", result);
 		return 0;
 }
 
