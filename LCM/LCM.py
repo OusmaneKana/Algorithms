@@ -6,7 +6,10 @@ def GCD(a,b):
 		a = mx%mn
 		b = mn
 	return b
-def LCM():
-	c = GCD()
+def LCM(a,b):
+	c = GCD(a,b)
+	return (a*b)/c
+
+print (LCM(16,200))
 	
 
