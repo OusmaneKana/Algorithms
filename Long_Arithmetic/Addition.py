@@ -6,8 +6,8 @@ Date : January 19 2018"""
 """After Solving this i'll try to use stacks to solve this problem"""
 
 
-l1="11"
-l2="91"
+l1=str(input(""))
+l2=str(input(""))
 
 
 #Create an Array to set the biggest the smallest number in a appropriate array
@@ -36,17 +36,20 @@ i=1
 while (len(Min)-c!=0):
 
 	if carry:
+		#Footprint: print ('Okey with Carry')
+		result[len(result)-i+1]-=10
 		result[len(result)-i]=int(Max[len(Max)-i])+ int(Min[len(Min)-i])+1
-		print ('Okey with Carry')
-	else:
+		
+	elif not carry:
+		#Footprint:  print ('Okey no Carry')
 		result[len(result)-i]=int(Max[len(Max)-i])+ int(Min[len(Min)-i])
-
-	print ('Okey')
-	print(result)
+		
+	#Footprint print(result)
 
 	if result[len(result)-i]>=10:
+		#Footprint: print("Carry alert")
 		carry = True
-		print("Carry alert")
+
 	else:
 		carry = False
 
@@ -58,8 +61,10 @@ while (len(Min)-c!=0):
 while (len(Max)-c!=0):
 	if carry:
 		result[len(result)-i]=int(Max[len(Max)-i])+1
+		result[len(result)-i+1]-=10
 		carry = False
 	else:
+		result[len(result)-i+1]-=10
 		result[len(result)-i]=int(Max[len(Max)-i])
 	print(result)
 	c+=1
@@ -68,7 +73,7 @@ while (len(Max)-c!=0):
 StrResult= ''.join(str(e)for e in result)
 
 
-print("Your result of ",l1,"+",l2," is", StrResult)
+print("The result of ",l1,"+",l2," is", StrResult)
 
 # while (len(Max)-c!=0):
 # 	pass
