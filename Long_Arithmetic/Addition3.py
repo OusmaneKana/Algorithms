@@ -6,8 +6,8 @@ Date : January 19 2018"""
 """After Solving this i'll try to use stacks to solve this problem"""
 
 
-l1="11111111"
-l2="11111111"
+l1="11"
+l2="91"
 
 
 #Create an Array to set the biggest the smallest number in a appropriate array
@@ -64,6 +64,11 @@ while (len(Max)-c!=0):
 	print(result)
 	c+=1
 
+
+StrResult= ''.join(str(e)for e in result)
+
+
+print("Your result of ",l1,"+",l2," is", StrResult)
 
 # while (len(Max)-c!=0):
 # 	pass
