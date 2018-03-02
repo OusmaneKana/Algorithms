@@ -15,6 +15,7 @@ def DivideArr(arr):
 
 def Merge():
 	DivideArr(arr = [9,3,7,31,5,34,56,4,32,3])
+	
 
 
 
