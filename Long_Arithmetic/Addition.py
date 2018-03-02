@@ -73,7 +73,7 @@ while (len(Max)-c!=0):
 StrResult= ''.join(str(e)for e in result)
 
 
-print("The result of ",l1,"+",l2," is", StrResult)
-
+#print("The result of ",l1,"+",l2," is", StrResult)
+print(StrResult)
 # while (len(Max)-c!=0):
 # 	pass

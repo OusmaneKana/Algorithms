@@ -71,9 +71,9 @@ while (len(Max)-c!=0):
 StrResult= ''.join(str(e)for e in result)
 
 if int(l1)<int(l2):
-	print("Your result of ",l1,"-",l2," is","-", StrResult)
+	print("-", StrResult)
 else:
-	print("Your result of ",l1,"-",l2," is", StrResult)
+	print(StrResult)
 
 # while (len(Max)-c!=0):
 # 	pass

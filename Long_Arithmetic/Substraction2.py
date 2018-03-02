@@ -6,8 +6,8 @@ Date : January 19 2018"""
 """After Solving this i'll try to use stacks to solve this problem"""
 
 
-l1="11"
-l2="91"
+l1=str(input(""))
+l2=str(input(""))
 
 
 #Create an Array to set the biggest the smallest number in a appropriate array
@@ -34,41 +34,46 @@ c=0
 i=1
 
 while (len(Min)-c!=0):
+# For the substraction operation, the carry gonna be if the number of the bottom is greater than the number on the top .......if i am making sense XD XD
 
-	if carry:
-		result[len(result)-i]=int(Max[len(Max)-i])+ int(Min[len(Min)-i])+1
-		print ('Okey with Carry')
-	else:
-		result[len(result)-i]=int(Max[len(Max)-i])+ int(Min[len(Min)-i])
-
-	print ('Okey')
-	print(result)
-
-	if result[len(result)-i]>=10:
-		carry = True
+	if int(Max[len(Max)-i]) < int(Min[len(Min)-i]):
 		print("Carry alert")
+		result[len(result)-i]=int(Max[len(Max)-i])+10- int(Min[len(Min)-i])
+		carry = True
+		
 	else:
 		carry = False
+		result[len(result)-i]=int(Max[len(Max)-i])- int(Min[len(Min)-i])
 
+	if carry:
+		result[len(result)-i-1]=int(Max[len(Max)-i-1])- int(Min[len(Min)-i])+1
+
+	# print(result)
 	c+=1
 	i+=1
 # remaining_count=len(Max)-len(Min)
-"""At this stage if the Min legnth is over we will just check the next index if there is a carry, we will add 1 and the rest will be field by the rest of max"""
 
 while (len(Max)-c!=0):
 	if carry:
-		result[len(result)-i]=int(Max[len(Max)-i])+1
+		print("Carry alert from past")
+		result[len(result)-i]=int(Max[len(Max)-i])-1
 		carry = False
+		
 	else:
+		print("no carry")
 		result[len(result)-i]=int(Max[len(Max)-i])
-	print(result)
+
+	# Footprint print(result)
 	c+=1
+	i+=1
 
 
 StrResult= ''.join(str(e)for e in result)
 
-
-print("Your result of ",l1,"+",l2," is", StrResult)
+if int(l1)<int(l2):
+	print("Your result of ",l1,"-",l2," is","-", StrResult)
+else:
+	print("Your result of ",l1,"-",l2," is", StrResult)
 
 # while (len(Max)-c!=0):
 # 	pass
